@@ -2,18 +2,20 @@ package com.driver;
 
 public class Main {
     public static void main(String[] args) {
-        B b = new B();
-        System.out.println(b.meth());
+        A obj = new A();
+        System.out.println(obj.meth());
+        A obj1 = new B();
+        System.out.println(obj1.meth());
     }
   
 }
 class A{
-    public static String meth(){
+    String meth(){
         return "Invoking method from class A";
     }
 }
 class B extends A{
-    public static String meth(){
+    String meth(){
         return "Method is overridden in Extendend class B";
     }
 }
